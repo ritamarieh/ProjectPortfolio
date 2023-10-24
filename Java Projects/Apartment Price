@@ -1,0 +1,86 @@
+/*Estimated apartment prices bases on users desires.*/
+import java.util.Scanner;
+
+public class ApartmentSales{
+   public static void main(String[] args){
+   Scanner scnr = new Scanner (System.in);
+   
+   int apartmentType;
+   int parkingType;
+   int estimatedPrice;
+   System.out.println("Please select a view: (1) Park (2) Golf Course (3) Lake");
+   
+   apartmentType = scnr.nextInt();
+   
+   if (apartmentType == 1){
+      System.out.println("Please select a parking option: (1) Garage (2) Space");
+      parkingType = scnr.nextInt();
+      
+      if(parkingType == 1){
+         estimatedPrice = 155000; 
+          System.out.println("Your choice: Park view with a garage");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+      else if (parkingType == 2){
+         estimatedPrice = 150000;
+          System.out.println("Your choice: Park view with a parking space");  
+          System.out.println("Estimated price: $" + estimatedPrice);        
+         }
+      else {
+         estimatedPrice = 150000;
+         System.out.println("Your choice: Park view");
+          System.out.println("Error: invalid parking option");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+   }
+    else  if (apartmentType == 2){
+       System.out.println("Please select a parking option: (1) Garage (2) Space");
+       parkingType = scnr.nextInt();
+       
+      if(parkingType == 1){
+         estimatedPrice = 175000;
+          System.out.println("Your choice: Golf course view with a garage");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+      else if (parkingType == 2){
+         estimatedPrice = 170000;
+          System.out.println("Your choice: Golf course view with a parking space");  
+          System.out.println("Estimated price: $" + estimatedPrice);        
+         }
+      else {
+          estimatedPrice = 170000;
+          System.out.println("Your choice: Golf course view");
+          System.out.println("Error: invalid parking option");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+   }
+   
+  else if (apartmentType == 3){
+     System.out.println("Please select a parking option: (1) Garage (2) Space");
+     parkingType = scnr.nextInt();
+     
+      if(parkingType == 1){
+          estimatedPrice = 215000;
+          System.out.println("Your choice: Lake view with a garage");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+      else if (parkingType == 2){
+         estimatedPrice = 210000;
+          System.out.println("Your choice: Lake view with a parking space");  
+          System.out.println("Estimated price: $" + estimatedPrice);        
+         }
+      else {
+         estimatedPrice = 210000;
+         System.out.println("Your choice: Lake view"); 
+          System.out.println("Error: invalid parking option");  
+          System.out.println("Estimated price: $" + estimatedPrice);
+      }
+   }
+   else {  
+      estimatedPrice = 0;
+      System.out.println("Your choice: ");
+      System.out.println("Error: invalid choice of view.");
+      System.out.println("Estimated price: $" + estimatedPrice);
+   }
+   }
+}
