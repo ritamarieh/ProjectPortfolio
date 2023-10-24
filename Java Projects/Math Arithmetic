@@ -1,0 +1,103 @@
+/*Doing arithmetic expressions with different data types.*/
+*import statements go up here*/
+import java.util.Scanner;
+
+public class MathExpressions {
+   public static void main(String[] args) {
+      //ID comment goes here!!!!!
+      /* Declare your variables here
+         remember:
+         parts A-E will be using int
+         parts F-J will be using double
+      */
+      int a;
+      int b;
+      int c;
+      int d;
+      int resultA;
+      int resultB;
+      int resultC;
+      int resultD;
+      int resultE;
+      
+      double e;
+      double f;
+      double g;
+      double h;
+      
+      double resultF;
+      double resultG;
+      double resultH;
+      double resultI;
+      double resultJ;
+      
+      
+      /*Scanner is also a variable*/
+      Scanner scan = new Scanner(System.in);
+      
+      a = scan.nextInt();
+      b = scan.nextInt();
+      c = scan.nextInt();
+      d = scan.nextInt();
+      
+      /*read in values for variables a-d. You will need to use scan.nextInt()*/
+      
+      System.out.println("Using int:");
+      /*evaulate A-E and print the results after each equation
+        EX:
+        resultX = 1 + 2;
+        Sytstem.out.println(resultX);
+        And remember, variables must be declared before you can use them!
+      */
+        
+      // A. resultA = a + b - c / 15
+         resultA = a + b - c / 15;
+         System.out.println(resultA);
+         
+      // B. resultB = 2 / 3 - 2 + 5 + d
+         resultB = 2 / 3 - 2 + 5 + d;
+         System.out.println(resultB);
+         
+      // C. resultC is equal to the difference between results of A and B
+         resultC = resultA - resultB;
+         System.out.println(resultC);
+         
+      // D. resultD is equal to the area of a rectangle if the side lengths are equal to the results of A and C
+         resultD = resultA * resultC;
+         System.out.println(resultD);
+         
+      // E. resultE is equal to the average of results A-D
+         resultE = (resultA + resultB + resultC + resultD) / 4;
+         System.out.println(resultE);
+      
+      /*read in values for variables a-d. This time you have doubles, so instead of scan.nextInt() it should be......*/
+      
+      e = scan.nextDouble();
+      f = scan.nextDouble();
+      g = scan.nextDouble();
+      h = scan.nextDouble();
+      
+      System.out.println("Using double:");
+      /*evaulate F-J and print the results after each equation*/
+      
+      // F. resultF = e + f - g / 15.0
+         resultF = e + f - g / 15.0;
+         System.out.println(resultF);
+         
+      // G. resultG = 2.0 / 3.0 - 2.0 + 5.0 + h
+         resultG = 2.0 / 3.0 - 2.0 + 5.0 + h;
+         System.out.println(resultG);
+         
+      // H. resultH is equal to the difference between results of F and G
+         resultH = resultF - resultG;
+         System.out.println(resultH);
+         
+      // I. resultI is equal to the area of a rectangle if the side lengths are equal to the results of F and H
+         resultI = resultF * resultH;
+         System.out.println(resultI);
+         
+      // J. resultJ is equal to the average of results F-I
+         resultJ = (resultF + resultG + resultH + resultI) / 4;
+         System.out.println(resultJ);
+   }
+}
