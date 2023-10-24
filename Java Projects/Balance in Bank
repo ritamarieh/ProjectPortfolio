@@ -1,0 +1,33 @@
+/*
+Rita Herfi
+The purpose of this program is to use a do-while loop to calculate the balance and interest of every year the user inputs
+*/
+import java.util.Scanner;
+
+public class BankBalance{
+   public static void main (String[] args){
+   Scanner scnr = new Scanner(System.in);
+   
+   final double interestRate = 0.03; // as asked for in the spec   
+   int stop;
+   double balance;
+   int i = 1;
+   
+   //get user input
+   System.out.println("Enter initial bank balance: ");
+   balance = scnr.nextInt();
+   
+   do{
+      balance = balance + (balance*interestRate);
+      
+      System.out.println("After year "+ i +" at "+ interestRate +" interest rate, balance is $" + balance);
+      System.out.println("Do you want to see the balance at the end of another year?");
+      
+      System.out.println("Enter 1 for yes or any other number for no: ");
+      stop = scnr.nextInt(); //Stop or not
+   ++i; //to count more years after user asks
+   }while(stop == 1); // when stop is not equal to 1 then stop
+   
+   
+   }
+}
