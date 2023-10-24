@@ -1,0 +1,38 @@
+/*Remove gray from the color valus inputted*/
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      int firstNum;
+      int secondNum;
+      int thirdNum;
+      
+      firstNum = scnr.nextInt();
+      secondNum = scnr.nextInt();
+      thirdNum = scnr.nextInt();
+      
+      if((firstNum < secondNum) && (firstNum < thirdNum)){
+       secondNum -= firstNum;
+       thirdNum -= firstNum;
+       firstNum -= firstNum;
+       System.out.println(firstNum + " " + secondNum + " " + thirdNum);
+      }
+      
+      else if((secondNum < firstNum) && (secondNum < thirdNum)){
+       firstNum -= secondNum;
+       thirdNum -= secondNum;
+       secondNum -= secondNum;
+       
+       System.out.println(firstNum + " " + secondNum + " " + thirdNum);
+      }
+      
+      else {
+       firstNum -= thirdNum;
+       secondNum -= thirdNum;
+       thirdNum -= thirdNum;
+       
+       System.out.println(firstNum + " " + secondNum + " " + thirdNum);
+      }
+   }
+}
