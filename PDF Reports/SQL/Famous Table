@@ -1,0 +1,68 @@
+/* Create table about the people and what they do here */
+CREATE TABLE famous (id INTEGER PRIMARY KEY AUTOINCREMENT, name TEXT, age INTEGER, gender TEXT, occupation TEXT, zodiac TEXT);
+
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES ("Harry Styles", 29, "M", "Singer", "Aquarius");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES ("Niall Horan", 29, "M", "Singer", "Virgo");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES ("Liam Payne", 29, "M", "Singer", "Virgo");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Louis Tomlinson", 31, "M", "Singer", "Capricorn");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Zayn Malik", 30, "M", "Singer", "Capricorn");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Rihanna Fenty", 35, "F", "Singer", "Pisces");
+
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Ray Bradbury", 91, "M", "Author", "Leo");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Sarah J. Maas", 36, "F", "Author", "Pisces");INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Talia Hibbert", 26, "F", "Author", "Unknown");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Silvia Moreno-Garcia", 41, "F", "Author", "Taurus");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Helen Huang", 41, "F", "Author", "Unknown");
+
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Anthony Mackie", 44,"M", "Actor", "Libra");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Florence Pugh", 27, "F", "Actor", "Capricorn");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Brendan Fraser", 54, "M", "Actor", "Sagittarius");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Selena Gomez", 32, "F", "Actor", "Leo");
+INSERT INTO famous (name, age, gender, occupation, zodiac) VALUES("Jason Momoa", 43, "M", "Actor", "Leo");
+
+/*Adding a table that specifies if they have a second occupation and if so, what it is. */
+CREATE TABLE occupation2(id INTEGER PRIMARY KEY, famous_id INTEGER, second_occupation TEXT, occupation TEXT);
+
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(1, "Yes", "Actor");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(2, "Yes", "Show Judge");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(3, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(4, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(5, "Yes", "Investor");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(6, "Yes", "Entrepreneur");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(7, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(8, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(9, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(10, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(11, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(12, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(13, "Yes", "Chef");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(14, "No", "Not Applicable");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(15, "Yes", "Actor");
+INSERT INTO occupation2(famous_id, second_occupation, occupation)VALUES(16, "No", "Not Applicable");
+
+SELECT famous.name, famous.occupation,occupation2.occupation FROM famous
+LEFT OUTER JOIN occupation2
+ON famous_id = famous.id
+WHERE occupation2.second_occupation = "Yes";
+
+
+
+
+/* Table created to demonstrate how UPDATE works*/
+
+CREATE TABLE reading(id INTEGER PRIMARY KEY AUTOINCREMENT, author TEXT, title TEXT); 
+
+INSERT INTO reading(author, title) VALUES("Julie Murphy","If the Shoe Fits");
+INSERT INTO reading(author, title) VALUES("Rick Riordan","Percy Jackson and the Sea of Monsters");
+INSERT INTO reading(author, title) VALUES("Lewis Carroll","Alice’s Adventures in Wonderland");
+INSERT INTO reading(author, title) VALUES("John Steinbeck","Of Mice and Men");
+
+SELECT * FROM reading;
+
+UPDATE reading SET title = "East of Eden" WHERE id = 4;
+
+SELECT * FROM reading;
+
+DELETE FROM reading WHERE id = 4;
+
+SELECT * FROM reading;
+
