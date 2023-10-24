@@ -1,0 +1,23 @@
+/*Write a program with two inputs, current price and last month's price (both integers). Then, output a summary listing the price, the change since last month, and the estimated monthly mortgage. */
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int currentPrice; 
+      int lastMonthsPrice; 
+      int priceChange;
+      double monthlyMortgage;
+      
+      currentPrice = scnr.nextInt(); 
+      lastMonthsPrice = scnr.nextInt();
+      
+      /* Type your code here. */
+      priceChange = currentPrice - lastMonthsPrice;
+      monthlyMortgage = (currentPrice * 0.051) /12;
+      
+      System.out.println("This house is $" + currentPrice + ". The change is $" + priceChange + " since last month.");
+      System.out.println("The estimated monthly mortgage is $" + monthlyMortgage + ".");
+   }
+   
+}
