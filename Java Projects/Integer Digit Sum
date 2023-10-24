@@ -1,0 +1,36 @@
+/* Sum the digits of an integer between 1 - 1000. */
+import java.util.Scanner;
+
+public class SumIntegerDigits{
+   public static void main(String[] arg) {
+   Scanner scnr = new Scanner(System.in);
+   
+   int integer; 
+   int thousand;
+   int hundred;
+   int ten;
+   int one;
+   int sum;
+   
+   System.out.print("Enter a number between 0 and 1000: ");
+   
+   integer = scnr.nextInt();
+   
+   one = integer % 10;
+   integer = integer / 10;
+   
+   ten = integer % 10;
+   integer = integer / 10;
+   
+   hundred = integer % 10;
+   integer = integer / 10;
+   
+   thousand = integer % 10;
+   integer = integer / 10;
+   
+   sum = one + ten + hundred + thousand;
+   
+   System.out.println("The sum of the digits is " + sum);
+   
+   }
+}
