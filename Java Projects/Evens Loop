@@ -1,0 +1,30 @@
+/*
+Rita Herfi
+This program takes input from a user and asks them to enter an even number until they enter 999 to quit.
+*/
+
+import java.util.Scanner;
+
+public class EvenEntryLoop{
+   public static void main(String[] args){
+    Scanner scnr = new Scanner (System.in);  
+      int evenNum; // for user input
+      int quit = 999;
+      do{
+         System.out.println("Enter an even number or 999 to quit: ");
+         
+         //get user input
+         evenNum = scnr.nextInt();
+         
+         if (evenNum % 2 == 0){ // asks if number is even  by checking if it is divisible by 2
+            System.out.println("Good job!");
+         }
+         else if(!(evenNum % 2 == 0) && (evenNum != quit)){ // Don't want it to equal quit because it'll say its an odd number, we just want to quit
+          System.out.println(evenNum + " is not an even number.");  
+         }
+         
+      } while(evenNum != quit); // while the number is not 999 keep asking user for input
+      
+      
+   }
+}
