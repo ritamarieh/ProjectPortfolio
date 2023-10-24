@@ -1,0 +1,21 @@
+/*User inputted text gets switched to a strong password.*/
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      String password;
+      int i;
+      
+      password = scnr.nextLine();
+      
+      password = password.replace('i','1');  
+      password = password.replace('a','@');
+      password = password.replace('m','M');
+      password = password.replace('B','8');
+      password = password.replace('s','$');
+      password = password.concat("!");
+      
+      System.out.println(password);
+   }
+}
