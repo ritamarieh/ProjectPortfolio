@@ -1,0 +1,44 @@
+/*Write a program that prints out a specific message in Morse Code*/
+public class MorseCode
+{
+    public static void main(String[] args)
+    {
+      String A = ".- ";
+      String B = "-... ";
+      String C = "-.-. ";
+      String D = "-.. ";
+      String E = ". ";
+      String F = "..-. ";
+      String G = "--. ";
+      String H = ".... ";
+      String I = ".. ";
+      String J = ".--- ";
+      String K = "-.- ";
+      String L = ".-.. ";
+      String M = "-- ";
+      String N = "-. ";
+      String O = "--- ";
+      String P = ".--. ";
+      String Q = "--.- ";
+      String R = ".-. ";
+      String S = "... ";
+      String T = "- ";
+      String U = "..- ";
+      String V = "...- ";
+      String W = ".-- ";
+      String X = "-..- ";
+      String Y = "-.--";
+      String Z = "--.. ";
+   
+   System.out.print(I + "/ ");
+   System.out.print(C + O + U + L + D + "/ ");
+   System.out.print(D + O + "/ ");
+   System.out.print( T + H + I + S + "/ ");
+   System.out.print(A + L + L + "/ ");
+   System.out.print(D + A + Y);
+
+    }
+}
+
+    
+    
