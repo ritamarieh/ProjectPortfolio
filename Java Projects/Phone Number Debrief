@@ -1,0 +1,25 @@
+/*
+ * Description: this program asks a user to enter a number an that number exracts a area code, exchange, and the remaining four digits   
+ *  Rita Herfi
+ */
+import java.util.Scanner;
+
+public class Lab5c{
+ public static void main (String[] args){  
+  Scanner scnr = new Scanner (System.in); 
+   String phoneNumber;
+   
+   System.out.println("Enter 10-digit telephone number: ");
+   phoneNumber = scnr.nextLine();
+   if ((phoneNumber.length() != 10)){
+      System.out.println("You entered " + phoneNumber + "\nPlease enter a 10-digit number");
+   }
+   else{
+      System.out.println("You entered " + phoneNumber);
+      System.out.println("The area code is " + phoneNumber.substring(0,3));
+      System.out.println("The exchange is " + phoneNumber.substring(3,6));
+      System.out.println("The number is " + phoneNumber.substring(6,10));
+      System.out.println("The complete telephone number is (" + phoneNumber.substring(0,3) + ") " + phoneNumber.substring(3,6) + "-" + phoneNumber.substring(6,10));
+   }
+ }
+}
