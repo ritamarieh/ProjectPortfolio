@@ -1,0 +1,31 @@
+/*Program of the distance formula.*/
+// header comments
+
+// Scanner import
+import java.util.Scanner;
+
+public class GeometryPointDistance {
+   public static void main(String[] args) { 
+   Scanner scnr = new Scanner(System.in);
+   
+   double number1;
+   double number2;
+   double number3;
+   double number4;
+   double distance;
+   
+      // Get four numbers for point coordinates
+      System.out.println("Enter first point as number1 number2 on one line: ");
+      number1 = scnr.nextDouble();
+      number2 = scnr.nextDouble();
+      
+      System.out.println("Enter second point as number3 number4 on one line: ");
+      number3 = scnr.nextDouble();
+      number4 = scnr.nextDouble();
+      
+      // Compute distance
+      distance = Math.sqrt(Math.pow((number3 - number1),2) + Math.pow((number4 - number2),2));
+      // Print distance using printf()
+      System.out.printf("Distance between points is:  %2.5f\n", distance);
+   }
+}
