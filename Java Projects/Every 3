@@ -1,0 +1,36 @@
+/*
+Rita Herfi
+
+This program takes in a starting number and ending number from a user and will print out the numbers divisible by 3.
+
+*/
+import java.util.Scanner;
+
+public class CountBy3{
+   public static void main(String[] args){
+   Scanner scnr = new Scanner (System.in);
+   
+   int startingValue;
+   int endingValue;
+   int i = 0; //to iterate through numbers
+   
+   //Getting input from user
+   System.out.println("Enter starting value: ");
+   startingValue = scnr.nextInt();
+   
+   System.out.println("Enter ending value: ");
+   endingValue = scnr.nextInt();
+   
+   System.out.println("Counting by " + startingValue + " up to " + endingValue + ":");
+   
+   i = startingValue; //so that starting value does not change
+   
+   while (i <= endingValue){ //iterate until i reaches the last value
+      if(i % 3 == 0) { // if the number is divisible by 3
+         System.out.print(i + " ");
+      }
+      ++i; //update i to go through all the numbers
+   }
+   
+   }
+}
