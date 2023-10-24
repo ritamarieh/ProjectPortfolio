@@ -1,0 +1,63 @@
+/*
+ * Description:  this program asks to use if-else if - else style to determine the season from the date a user enters
+ * @author: Rita Herfi
+ */
+
+import java.util.Scanner;
+public class Season {
+ public static void main(String[] args){  
+   Scanner scnr = new Scanner(System.in);
+   int month;
+   int day;
+   String season;
+   
+   System.out.println("Enter a month and day: ");
+   
+   month = scnr.nextInt();
+   day = scnr.nextInt();
+   
+   if ((month == 1) || (month == 2) || (month == 3)){
+    if((month % 3 == 0) && (day >= 21)){
+     season = "Spring";
+     System.out.println(season);
+    }
+    else{
+     season = "Winter"; 
+     System.out.println(season);
+    }
+   }
+   
+   else if ((month == 4) || (month == 5) || (month == 6)){
+    if((month % 3 == 0) && (day >= 21)){
+     season = "Summer";
+     System.out.println(season);
+    }
+    else{
+     season = "Spring";  
+     System.out.println(season);
+    }
+   }
+  
+   else if ((month == 7) || (month == 8) || (month == 9)){
+    if((month % 3 == 0) && (day >= 21)){
+     season = "Fall";
+     System.out.println(season);
+    }
+    else{
+     season = "Summer";
+     System.out.println(season);
+    }
+   }
+   
+   else if ((month == 10) || (month == 11) || (month == 12)){
+    if((month % 3 == 0) && (day >= 21)){
+     season = "Winter";
+     System.out.println(season);
+    }
+    else{
+     season = "Fall";  
+     System.out.println(season);
+    }
+   }
+ } 
+}
