@@ -1,0 +1,69 @@
+/*Evaluating the user input based on the abbreviated month.*/
+import java.util.Scanner;
+
+public class SwitchingUpMonths {
+   public static void main(String[] args) {
+     Scanner scnr = new Scanner (System.in);
+     String month;
+     
+     System.out.println("Enter the month:");
+     month = scnr.nextLine();
+     System.out.println("You entered " + month);
+     month = month.toUpperCase();
+     month = month.substring(0,3);
+     switch (month){
+        case "JAN":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 1");
+           break;
+        case "FEB":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 2");
+           break;
+        case "MAR":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 3");
+           break;
+        case "APR":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 4");
+           break;
+        case "MAY":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 5");
+           break;
+        case "JUN":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 6");
+           break;
+       case "JUL":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 7");
+           break;
+       case "AUG":
+          System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 8");
+           break;
+       case "SEP":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 9");
+           break;
+       case "OCT":
+          System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 10");
+           break;
+       case "NOV":
+          System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 11");
+           break;
+       case "DEC":
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 12");
+           break;
+      default:
+           System.out.println("Its abbreviation is " + month);
+           System.out.println("This is month number 0");
+         break;
+     }
+   }
+}
