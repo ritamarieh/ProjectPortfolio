@@ -1,0 +1,83 @@
+/*a program that takes an integer and turns it into change in USA currency. */
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      
+      int changeTotal;
+      int dollars;
+      int quarters;
+      int dimes;
+      int nickels;
+      int pennies;
+      
+      changeTotal = scnr.nextInt();
+      if (changeTotal <= 0){
+         System.out.println("No change");  
+      }
+      if (changeTotal > 0){
+      dollars = changeTotal / 100;
+      changeTotal -= (dollars * 100);
+         if (dollars == 1){
+            System.out.println(dollars + " Dollar");
+         }
+         else if (dollars > 1){
+            System.out.println(dollars + " Dollars");
+         }
+         else{
+         }
+      }
+      
+      if (changeTotal > 0){
+      quarters = changeTotal / 25;
+      changeTotal -= (quarters * 25);
+         if (quarters == 1){
+            System.out.println(quarters + " Quarter");
+         }
+         else if (quarters > 1){
+            System.out.println(quarters + " Quarters");
+         }
+         else{
+         }
+      }
+      
+      if (changeTotal > 0){
+      dimes = changeTotal / 10;
+      changeTotal -= (dimes * 10);
+         if (dimes == 1){
+            System.out.println(dimes + " Dime");
+         }
+         else if (dimes > 1){
+            System.out.println(dimes + " Dimes");
+         }
+         else{
+         }
+      }
+      
+      if (changeTotal > 0){
+      nickels = changeTotal / 5;
+      changeTotal -= (nickels * 5);
+         if (nickels == 1){
+            System.out.println(nickels + " Nickel");
+         }
+         else if (nickels > 1){
+            System.out.println(nickels + " Nickels");
+         }
+         else{
+         }
+      }
+      
+      if (changeTotal > 0){
+         pennies = changeTotal;
+         if (pennies == 1){
+            System.out.println(pennies + " Penny");
+         }
+        else if (pennies > 1){
+            System.out.println(pennies + " Pennies");
+         }
+         else{
+         }
+      }
+   }
+}
