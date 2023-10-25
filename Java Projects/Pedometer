@@ -1,0 +1,24 @@
+/*
+ *  Rita Herfi
+ *  A program measuring how many steps were walked based on the distance of feet completed. 
+ */
+import java.util.Scanner;
+
+public class LabProgram {
+   
+   public static double stepsToMiles(int userSteps){
+     double stepsToMiles = 0;
+     
+      stepsToMiles = ((double)userSteps) / 2000.0; // change to a double 
+      return stepsToMiles;
+      
+   }
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      int n;
+      n = scnr.nextInt(); //get user input
+      
+      System.out.printf("%.2f", stepsToMiles(n));
+   }
+}
