@@ -1,0 +1,33 @@
+/*
+Rita Herfi
+Takes user input and outputs middle item.
+*/
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int[] userValues = new int[9];  // Set of data specified by the user      
+      int num; // the integer to be input by the user
+      int counter = 0; // to count how many integers were inputted by the user
+      int i = 0; //for iteration
+      
+      num = scnr.nextInt();
+      
+      while(num != -1){
+         ++counter; //put counter here so that it counts before conditions
+         if (counter > 9){
+            System.out.println("Too many numbers"); //if the user puts too many numbers print this and leave the loop
+            break;
+         }
+         else{
+         userValues[i] = num; //if it passes the condition read in new number
+         ++i;
+          num = scnr.nextInt();
+         }
+      }
+      if(counter <= 9){
+      System.out.println("Middle item: " + userValues[(counter/2)]); //will do integer division and still output middle hopefully
+      }
+   }
+}
