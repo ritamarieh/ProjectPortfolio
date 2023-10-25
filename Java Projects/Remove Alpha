@@ -1,0 +1,28 @@
+/*
+Rita Herfi
+Removes alphabetic characters.
+*/
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static String removeSpaces(String userString){
+      int i;
+      String changedString = ""; //String to modify
+      for (i = 0; i < userString.length(); ++i){
+         if (userString.charAt(i) != ' '){ //if it is not a space put it in the new string
+          changedString += userString.charAt(i);
+         }
+      }
+      return changedString;
+   }
+   
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      
+      String str;
+      
+      str = scnr.nextLine();
+      
+      System.out.println(removeSpaces(str));
+   }
+}
