@@ -1,0 +1,24 @@
+/*Outputs numbers in reverse that were entered by user.*/
+import java.util.Scanner;
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int[] userList = new int[20];   // List of numElement integers specified by the user
+      int numElements;                // Number of integers in user's list
+      // Add more variables as needed
+      int i; //for iteration
+
+      numElements = scnr.nextInt();   // Input begins with number of integers that follow
+      
+     for(i = 0; i < numElements; ++i){
+        userList[i] = scnr.nextInt();
+     }
+     
+     //print array backwards
+     for(i = numElements-1; i >= 0; --i){ // did numElements -1 because it needs to be the size of the array we want
+        System.out.print(userList[i] + ",");
+     }
+     System.out.println();
+   }
+}
