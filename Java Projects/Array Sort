@@ -1,0 +1,45 @@
+/*Sorts an Array in ascending order.*/
+import java.util.Scanner;
+
+public class LabProgram {
+
+   public static void sortArray(int[] myArr, int arrSize){
+      int i; //for iteration
+      int j; //for iteration
+      int temp; //to hold a value
+      
+      //needs to be arrSize - 1 because if we use arrSize it will go out of bounds since we do myArr[i+1]
+      for (j = 0; j < arrSize-1; ++j){ //this will make it go through the array multiple times even though we don't use it for conditions
+         for(i = 0; i < arrSize-1; ++i){
+         if(myArr[i] > myArr[i+1]){ // if the next element is smaller than the current element make it equal to the next element
+            temp = myArr[i]; 
+            myArr[i] = myArr[i+1];
+            myArr[i+1] = temp;
+           // break;
+         }
+         }
+      }
+   }
+
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      int userArrSize;
+      int i; //to iterate through array 
+      
+      userArrSize = scnr.nextInt();
+      int[] userArr = new int[userArrSize]; //declare array and size of it
+      
+      //populate array
+      for(i = 0; i < userArrSize; ++i){
+         userArr[i] = scnr.nextInt();
+      }
+      
+      sortArray(userArr, userArrSize);
+      
+      //Print array
+      for(i = 0; i < userArrSize; ++i){
+         System.out.print(userArr[i] + " ");
+      }
+      System.out.println();
+   }
+}
