@@ -1,0 +1,66 @@
+/*Creates a triangle based on user inputted shape and height.*/
+import java.util.Scanner; 
+
+public class TriangleMethods {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      char symbol;
+      int height;
+      
+      System.out.println("Enter a character:");
+      symbol = scnr.next().charAt(0);   
+      
+      System.out.println("Enter triangle height:");
+      height = scnr.nextInt();
+      System.out.println("");
+      
+      rightTriangle(symbol, height);
+      invertedRightTriangle(symbol, height);
+      pyramidTriangle(symbol, height);
+      
+   }
+   
+   // FIXME:  Write triangle methods
+   public static void rightTriangle(char c, int height){
+      int i; // for iteration 
+      int j; // for iteration
+      
+      for(i = 0; i < height; ++i){ //makes dure the height of the triangle is printed 
+       for(j = 0; j <= i; ++j){ //will only print upt to the numbers in i so that they are not extra
+          System.out.print(c + " ");
+       }
+       System.out.println(); //put newline here so that every new row we have prints on a newline to create the triangle
+      }
+   }
+   
+   public static void invertedRightTriangle(char c, int height){
+      int a; // for iteration 
+      int b; // for iteration
+      
+      //similar to previous method but backwards
+      for(a = height; a > 0; --a){ //makes dure the height of the triangle is printed most first then decreases
+       for(b = a; b > 0; --b){ //will only print upt to the numbers up to a so that they are not extra
+          System.out.print(c + " ");
+       }
+       System.out.println(); //put newline here so that every new row we have prints on a newline to create the triangle
+      }
+      
+   }
+   
+   public static void pyramidTriangle(char c, int height){
+      int x; //for iteration
+      int y; //for iteration
+      
+      //Taken from lecture
+      for(x = 1; x <= height ; ++x) {
+			for (y = x; y < height; ++y) {
+				System.out.print("  ");  //added an extra space to make it even
+			}
+			for (y = 1; y <= 2 * x-1; ++y) {
+				System.out.print(c+ " ");
+			}
+			System.out.println();
+		}
+      
+   }
+}
