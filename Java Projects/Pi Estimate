@@ -1,0 +1,46 @@
+/* To format the table, use printf.  Something along the lines of:
+ *    System.out.printf("%3d        %6.4f\n", i, mi);
+ *
+ * Rita Herfi
+ * The estimation of pi based on user inputted iteration request.
+ */
+ 
+ public class Lab6b{
+    public static double estimatePi(int n){
+       int i;
+       double sum = 0.0;
+       
+       for(i = 1; i <= n; ++i){
+          sum += ((Math.pow(-1, i+1))/((2*i)-1)); //sum of function from prompt
+       }
+       return sum*4; // multiply sum by 4 then return
+    }
+    
+    public static void printHeader(){
+     System.out.println("i          m(i)");
+     System.out.println("-----------------");
+       
+    }
+    
+    public static void printTableEntry(int i, double mi){
+       
+       System.out.printf("%3d        %6.4f\n", i, mi);
+       //System.out.println();
+       
+    }
+    public static void main(String[] args){
+      printHeader();
+      //print table entries asked
+      printTableEntry(1, estimatePi(1));
+      printTableEntry(101, estimatePi(101)); 
+      printTableEntry(201, estimatePi(201)); 
+      printTableEntry(301, estimatePi(301));
+      printTableEntry(401, estimatePi(401));
+      printTableEntry(501, estimatePi(501));
+      printTableEntry(601, estimatePi(601));
+      printTableEntry(701, estimatePi(701));
+      printTableEntry(801, estimatePi(801));
+      printTableEntry(901, estimatePi(901));
+    }
+    
+ }
