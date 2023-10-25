@@ -1,0 +1,23 @@
+/*Two input values get swapped for the output.*/
+
+import java.util.Scanner;
+
+public class LabProgram {
+   
+   public static void swapValues(int[] values){
+      int temp = values[0]; //Holds first value
+      values[0] = values[1];
+      values[1] = temp;
+   }
+   
+   public static void main(String[] args) {
+    Scanner scnr = new Scanner (System.in);
+    int[] swap = new int[2]; //Declaring array for values
+    
+    swap[0] = scnr.nextInt();
+    swap[1] = scnr.nextInt();
+    
+    swapValues(swap);
+    System.out.println(swap[0] + " " + swap[1]); //print new values
+   }
+}
