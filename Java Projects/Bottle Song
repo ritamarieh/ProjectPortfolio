@@ -1,0 +1,54 @@
+/*
+Rita Herfi
+Progam of the bootle song where the length of the song is based on user input.
+*/
+import java.util.Scanner;
+
+public class Lab6a {
+   
+   public static void main(String[] args) {
+      Scanner scan = new Scanner(System.in);
+ 
+      System.out.println("How many bottles of beer on the wall now?");
+      int bottles = scan.nextInt();
+      
+      // loop through the song lyrics until no more bottles on the wall
+      int i;
+      for(i = bottles; i >= 1; --i){
+       beerOnTheWall(i); //calls first verse
+       bottlesOfBeer(i); //calls second verse
+       takeOneDown(); // calls third verse
+       if ((i-1) >= 1){ //has to be more than 1
+         beerOnTheWall(i-1); //calls first verse again with one less bottle
+       }
+       else{
+        System.out.println("No more bottles of beer on the wall");  //bottles is zero
+       }
+        System.out.println();
+      }
+   }
+   
+   // Write beerOnTheWall method here which has one int parameter for number of bottles
+   public static void beerOnTheWall(int numBottles) {
+     if (numBottles != 1){
+         System.out.println(numBottles + " bottles of beer on the wall");
+      }
+      else{
+         System.out.println(numBottles + " bottle of beer on the wall");
+      }
+   }
+   // Write bottlesOfBeer method here which has one int parameter for number of bottles
+   public static void bottlesOfBeer(int numBottles){
+      if (numBottles != 1){
+         System.out.println(numBottles + " bottles of beer");
+      }
+      else{
+         System.out.println(numBottles + " bottle of beer");
+      }
+   }
+   
+   // Write takeOneDown method here, having an empty parameter list
+  public static void takeOneDown(){
+   System.out.println("Take one down, pass it around");  
+  }
+} 
