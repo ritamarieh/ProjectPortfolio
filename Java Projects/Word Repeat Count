@@ -1,0 +1,43 @@
+/*
+Rita Herfi
+User enters amount of words in an array and program counts the amount of times the words are repeated. 
+*/
+
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+   Scanner scnr = new Scanner (System.in);
+   int NUM_ELEMENTS = 20; //As stated in prompt no more than 20 words
+   String[] userStr = new String[NUM_ELEMENTS]; //array for strings
+   int[] freq = new int[NUM_ELEMENTS]; //array for frequency
+   int numWords; //user inputted desired amount of words
+   int counter = 0; //to count frequency of a word
+   int i; // for iteration
+   int j; //for nested iteration
+   
+   numWords = scnr.nextInt();
+   
+   //populate array, i.e. get words from user
+   for(i = 0; i < numWords; ++i){
+      userStr[i] = scnr.next();
+   }
+   
+   //count frequencies
+   for(i = 0; i < numWords; ++i){
+      for(j = 0; j < numWords; ++j){
+       if (userStr[i].equals(userStr[j])){ //if the words match add to the counter
+          counter++;
+          freq[i] = counter; // populate frequency array
+       }
+      }
+      counter = 0; //reset the counter so that other words can be counted 
+   }
+   
+   //print arrays
+   for(i = 0; i < numWords; ++i){
+    System.out.println(userStr[i] + " - " + freq[i]);  
+   }
+   
+   }
+}
