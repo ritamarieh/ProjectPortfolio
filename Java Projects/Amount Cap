@@ -1,0 +1,31 @@
+/*
+Rita Herfi
+Takes in user input of a list of numbers and outputs the numbers that are less than the last inputted number.
+*/
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner(System.in);
+      int[] userValues = new int[20];   // List of integers from input
+      int num; //number of integers the user wants
+      int threshold; //to keep the last number of the input stored somewhere
+      int i; //for iteration
+      
+      num = scnr.nextInt();
+      
+      //Populate array
+      for(i = 0; i <= num; ++i){
+         userValues[i] = scnr.nextInt();
+      }
+      threshold = userValues[num]; //should be the last inputted number
+      //System.out.println(threshold + ":)"); for testing
+      
+      for(i = 0; i < num; ++i){
+         if(userValues[i] <= threshold){
+          System.out.print(userValues[i] + ",");  // print all values less than or equal to the threshold with a comma after
+         }
+      }
+       System.out.println();
+   }
+}
