@@ -1,0 +1,40 @@
+/*
+Rita Herfi
+Organizes a list of numbers in ascending order.
+*/
+import java.util.Scanner; 
+
+public class LabProgram {
+   public static void main(String[] args) {
+      Scanner scnr = new Scanner (System.in);
+      double[] arr = new double[20]; //should be 20 numbers or less
+      int num; //number of elements user wants
+      double max; //largest number in the array
+      int i; //for iteration
+      
+      num = scnr.nextInt();
+      
+      
+      //populate array
+      for (i = 0; i < num; ++i){
+         arr[i] = scnr.nextDouble();
+         //System.out.print(arr[i]);
+      }
+     
+      //find the max
+      max = arr[0]; //initalize with first element from array and go from there
+      for (i = 0; i < num; ++i){
+         if(arr[i] > max){ //if the element is bigger than the max replace the max
+           max = arr[i]; 
+         }
+      }
+      
+      //divide and print array
+      for(i = 0; i < num; ++i){
+         System.out.printf("%.2f", (arr[i]/max)); //print element number divided by max
+         System.out.print(" ");
+      }
+      System.out.println();
+      
+   }
+}
