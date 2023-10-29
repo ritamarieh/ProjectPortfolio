@@ -1,0 +1,65 @@
+ /*  Financials Class and Stock class to implement a has-a relationship.
+  *  @author  Rita Herfi
+  */
+public class Financials {
+
+	private double PE; //Price to earnings ratio
+	private double EPS; //Earnings per share
+	private boolean hasDiv; //if a company has dividends or not
+	/**
+	 * Initialize private variables in constructor
+	 */
+	public Financials() {
+		PE = 0;
+		hasDiv = false;
+	}
+	/**
+	 * Constructor overload
+	 * Sets PE and hasDiv to what the user wants instead of the default
+	 * @param PE
+	 * @param hasDiv
+	 */
+	public Financials(double PE, double EPS, boolean hasDiv) {
+		this.PE = PE; //Uses the "this" keyword to refer to the private variable
+		this.EPS = EPS;
+		this.hasDiv = hasDiv;
+	}
+	/**
+	 * Sets PE Value
+	 */
+	public void setPE() {
+		
+	}
+	/**
+	 * Gets PE Value
+	 */
+	public double getPE() {
+		return PE;
+	}
+	/**
+	 * Sets EPS value 
+	 */
+	public void setEPS() {
+		
+	}
+	/**
+	 * Gets EPS value 
+	 */
+	public double getEPS() {
+		return EPS;
+	}
+	/**
+	 * 
+	 * @return hasDiv
+	 */
+	public boolean hasDividends() {
+		return hasDiv; 	
+	}
+	
+	
+	@Override
+	public String toString() {
+		return "Price/Earnings: " + PE + "; Earnings/Share: " + EPS + "; Dividends: " + hasDiv;
+	}
+}
+
