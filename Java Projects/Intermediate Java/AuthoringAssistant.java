@@ -1,8 +1,5 @@
 /**
- *  Program 2b
  *  Familiarize ourselves with an IDE and learn hoe to write classes without main
- *  CS108-1
- *  03 June 2021
  *  @author  Rita Herfi
   */
 
