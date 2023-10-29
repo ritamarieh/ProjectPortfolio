@@ -1,7 +1,4 @@
- /*  Program 3a
-  *  Financials Class and Stock class to implement a has-a relationship.
-  *  CS108-1
-  *  06 June 2021
+ /*  Financials Class and Stock class to implement a has-a relationship.
   *  @author  Rita Herfi
   */
 public class Stock {
