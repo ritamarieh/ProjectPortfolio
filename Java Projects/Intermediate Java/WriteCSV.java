@@ -2,10 +2,7 @@ import java.io.*;
 import java.util.Scanner;
 
 /**
- *  Program 4a
  *   Reading and writing files, using try/catch clauses, convert file type by renaming extension.
- *  CS108-1
- *  10 June 2021
  *  @author  Rita Herfi
   */
 // TODO import statements
