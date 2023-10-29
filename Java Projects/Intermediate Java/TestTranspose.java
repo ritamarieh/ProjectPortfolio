@@ -1,8 +1,5 @@
 /**
- *  Program 2c
  *  Driver program for Transpose class
- *  CS108-1
- *  03 June 2021
  *  @author  Rita Herfi
  */
 import java.util.Scanner;
