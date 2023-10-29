@@ -1,8 +1,5 @@
 /**
- *  Program 3b
  *  Learn to use the extend keyword
- *  CS108-1
- *  06 June 2021
  *  @author  Rita Herfi
   */
 import java.util.Scanner;
