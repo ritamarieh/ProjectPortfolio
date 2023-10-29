@@ -1,8 +1,5 @@
 /**
- *  Program 2c
  *  Transpose class for transposing a set of numbers in arrays
- *  CS108-1
- *  03 June 2021
  *  @author  Rita Herfi
   */
 public class Transpose {
